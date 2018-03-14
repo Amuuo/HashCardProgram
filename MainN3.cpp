@@ -14,7 +14,7 @@
 #include<conio.h>
 #include<windows.h>
 
-using namespace std;
+using namespace std; //testing changes
 
 const int TABLE_SIZE = 20;
 /*
@@ -26,26 +26,26 @@ class Card {
 private:
 	std::string  	   face;
 	std::string  	   suit;
-	unique_ptr<Card>   nextCard;
-	unique_ptr<Card>   prevCard;
+	Card*   nextCard;
+	Card*   prevCard;
 public:
 	Card();
 	Card(std::string(face), std::string(suit));
 	Card(Card&);
-	Card(unique_ptr<Card>);
+	Card(Card*);
 	~Card();
-	bool              operator==(unique_ptr<Card>);
-	unique_ptr<Card>  operator=(unique_ptr<Card>);
+	bool              operator==(Card*);
+	Card*  operator=(Card*);
 	Card              operator=(Card&);
-	unique_ptr<Card>  getNextPtr()const;
-	unique_ptr<Card>  getPrevPtr()const;
+	Card*  getNextPtr()const;
+	Card*  getPrevPtr()const;
 	std::string            getFace()const;
 	std::string            getSuit()const;
 	void              printCard()const;
 	void              setFace(std::string);
 	void              setSuit(std::string);
-	void              setNextPtr(unique_ptr<Card>);
-	void              setPrevPtr(unique_ptr<Card>);
+	void              setNextPtr(Card*);
+	void              setPrevPtr(Card*);
 	void              setPrevPtr(int);
 	void              eraseCard();
 	int               getKey();
@@ -58,17 +58,17 @@ SET CLASS
 class Set {
 private:
 	std::string       fileName;
-	array<unique_ptr<Card>, TABLE_SIZE> hashTable;
+	std::array<Card*, TABLE_SIZE> hashTable;
 public:
 	Set();
 	int     hashFunction(int)   const;
-	unique_ptr<Card>   getHashTable(int)   const;
-	std::string  bucketEnd(unique_ptr<Card>) const;
-	std::string  bucketFront(unique_ptr<Card>) const;
+	Card*       getHashTable(int)   const;
+	std::string  bucketEnd(Card*) const;
+	std::string  bucketFront(Card*) const;
 	std::string  getFileName();
 	void    setFileName(std::string);
 	void    printHash(std::string);
-	void    addCard(unique_ptr<Card>);
+	void    addCard(Card*);
 };
 
 /*
@@ -161,7 +161,7 @@ COPY CONSTRUCTORS
 =================================================================
 */
 Card::Card(Card& c1) : face(c1.getFace()), suit(c1.getSuit()), nextCard(nullptr), prevCard(nullptr) {}
-Card::Card(unique_ptr<Card> c1) : face(c1->getFace()), suit(c1->getSuit()), nextCard(nullptr), prevCard(nullptr) {}
+Card::Card(Card* c1) : face(c1->getFace()), suit(c1->getSuit()), nextCard(nullptr), prevCard(nullptr) {}
 /*
 =================================================================
 DESTRUCTORS
@@ -173,7 +173,7 @@ Card::~Card() { std::cout << "\nDestroying Card... (" << face << " of " << suit 
 OPERATOR OVERLOADS
 =================================================================
 */
-bool  Card::operator== (unique_ptr<Card> c2)
+bool  Card::operator== (Card* c2)
 {
 	if (c2 == this)
 	{
@@ -181,7 +181,7 @@ bool  Card::operator== (unique_ptr<Card> c2)
 	}
 	return ((this->face == c2->getFace()) && (this->suit == c2->getSuit()));
 }
-unique_ptr<Card> Card::operator= (unique_ptr<Card> rhs) { return rhs; }
+Card* Card::operator= (Card* rhs) { return rhs; }
 Card  Card::operator= (Card& rhs)
 {
 	this->face = rhs.getFace();
@@ -197,8 +197,8 @@ GETTERS
 */
 std::string Card::getFace()        const { return face; }
 std::string Card::getSuit()        const { return suit; }
-unique_ptr<Card>  Card::getNextPtr() const { return nextCard; }
-unique_ptr<Card>  Card::getPrevPtr() const { return prevCard; }
+Card*  Card::getNextPtr() const { return nextCard; }
+Card*  Card::getPrevPtr() const { return prevCard; }
 /*
 =================================================================
 SETTERS
@@ -206,8 +206,8 @@ SETTERS
 */
 void  Card::setFace(std::string f) { face = f; }
 void  Card::setSuit(std::string s) { suit = s; }
-void  Card::setNextPtr(unique_ptr<Card> tmpNextCard) { nextCard = tmpNextCard; }
-void  Card::setPrevPtr(unique_ptr<Card> tmpPrevCard) { prevCard = tmpPrevCard; }
+void  Card::setNextPtr(Card* tmpNextCard) { nextCard = tmpNextCard; }
+void  Card::setPrevPtr(Card* tmpPrevCard) { prevCard = tmpPrevCard; }
 void  Card::setPrevPtr(int i) { prevCard = nullptr; }
 
 void Card::printCard() const { std::cout << face << " of " << suit << " "; return; }
@@ -280,7 +280,7 @@ std::string Set::getFileName() { return fileName; }
 GETTERS
 =================================================================
 */
-unique_ptr<Card> Set::getHashTable(int i) const { return hashTable[i]; }
+Card* Set::getHashTable(int i) const { return hashTable[i]; }
 void             Set::setFileName(std::string file) { fileName = file; }
 /*
 =================================================================
@@ -315,7 +315,7 @@ DESCRIPTION : recursive function that takes the tail bucket link,
 and prints out links from head to tail
 =================================================================
 */
-std::string Set::bucketFront(unique_ptr<Card> frontLink) const
+std::string Set::bucketFront(Card* frontLink) const
 {
 	std::string s = frontLink->getFace() + " of " + frontLink->getSuit() + " -> ";
 	if (frontLink->getNextPtr() == nullptr) return s;
@@ -341,7 +341,7 @@ DESCRIPTION : prints the entire Set hashTable with bucket links
 */
 void Set::printHash(std::string graphic)
 {
-	unique_ptr<Card> tmpPtr;
+	Card* tmpPtr;
 
 	//std::cout << "\n-------------------------------------------------------------\n";
 	std::cout << "\n\n";
@@ -373,10 +373,10 @@ hashTable for first available slot at the index
 corresponding to hashFunction
 =================================================================
 */
-void Set::addCard(unique_ptr<Card> newCard)
+void Set::addCard(Card* newCard)
 {
 	int   hashValue = hashFunction(newCard->getKey());
-	unique_ptr<Card> arrayPtr = hashTable[hashValue];
+	Card* arrayPtr = hashTable[hashValue];
 
 
 	std::cout << "\n\n\t> Attempting to insert "; newCard->printCard(); std::cout << "at [" << hashValue << "]:";
@@ -406,7 +406,7 @@ void Set::addCard(unique_ptr<Card> newCard)
 		{
 			std::cout << "\n\t> linking "; newCard->printCard();
 			std::cout << "to "; arrayPtr->printCard();
-			unique_ptr<Card> arrayPtrNext = arrayPtr->getNextPtr();
+			Card* arrayPtrNext = arrayPtr->getNextPtr();
 
 			arrayPtrNext = new Card(newCard);
 			arrayPtr->setNextPtr(arrayPtrNext);
@@ -532,8 +532,8 @@ the result in a new set
 */
 void setUnion(vector<Set>& cardSet)
 {
-	unique_ptr<Card> tmpPtr;
-	unique_ptr<Card> tmpPtr2;
+	Card* tmpPtr;
+	Card* tmpPtr2;
 	Set*  newSet = new Set;
 	Set   s1;
 	Set   s2;
@@ -545,18 +545,18 @@ void setUnion(vector<Set>& cardSet)
 		tmpPtr = s1.getHashTable(i);
 		while (tmpPtr != nullptr)
 		{
-			for (unique_ptr<Card> tmpPtr2(s2.getHashTable(i)); tmpPtr2 != nullptr; tmpPtr2 = tmpPtr2->getNextPtr())
+			for (Card* tmpPtr2(s2.getHashTable(i)); tmpPtr2 != nullptr; tmpPtr2 = tmpPtr2->getNextPtr())
 			{
 				if (tmpPtr == tmpPtr2)
 				{
-					unique_ptr<Card> tmpPtrNext(tmpPtr->getNextPtr());
+					Card* tmpPtrNext(tmpPtr->getNextPtr());
 					delete tmpPtr;
 					tmpPtr = tmpPtrNext;
 				}
 			}
 			if (tmpPtr != nullptr)
 			{
-				unique_ptr<Card> tmpCard = new Card(tmpPtr);
+				Card* tmpCard = new Card(tmpPtr);
 				newSet->addCard(tmpCard);
 				tmpPtr = tmpPtr->getNextPtr();
 			}
@@ -567,9 +567,9 @@ void setUnion(vector<Set>& cardSet)
 		tmpPtr2 = s2.getHashTable(i);
 		if (tmpPtr2 != nullptr)
 		{
-			for (unique_ptr<Card> tmpPtr2(s2.getHashTable(i)); tmpPtr2 != nullptr; tmpPtr2 = tmpPtr2->getNextPtr())
+			for (Card* tmpPtr2(s2.getHashTable(i)); tmpPtr2 != nullptr; tmpPtr2 = tmpPtr2->getNextPtr())
 			{
-				unique_ptr<Card> tmpCard = new Card(tmpPtr2);
+				Card* tmpCard = new Card(tmpPtr2);
 				newSet->addCard(tmpCard);
 			}
 		}
@@ -647,7 +647,7 @@ void setImport(vector<Set>& cardSet)
 			deckInputFile >> face >> suit;
 			std::cout << "face: " << face << endl;
 			std::cout << "suit: " << suit << endl;
-			unique_ptr<Card> tempCard = new Card;
+			Card* tempCard = new Card;
 
 			tempCard->setFace(face);
 			tempCard->setSuit(suit);
@@ -823,7 +823,7 @@ void outputSet(vector<Set>& cardSet)
 	ifstream  artImport;
 	std::string    artFile;
 	int       fileNum;
-	unique_ptr<Card>     tmpPtr;
+	Card*     tmpPtr;
 	std::string    outputFileName;
 
 
