@@ -1,0 +1,6 @@
+Hand1.txt
+Hand2.txt
+Hand3.txt
+Hand4.txt
+Hand5.txt
+Hand6.txt

@@ -1,0 +1,2 @@
+﻿  MainN.cpp
+c:\users\adam\source\repos\project1\project1\mainn.cpp(171): error C4716: 'Card::operator=': must return a value

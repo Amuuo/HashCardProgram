@@ -1,0 +1,125 @@
+﻿  MainN.cpp
+MainN.cpp(654): error C2784: 'std::_Vb_iterator<_Alvbase_wrapped> std::operator +(_Vb_iterator<_Alvbase_wrapped>::difference_type,std::_Vb_iterator<_Alvbase_wrapped>)': could not deduce template argument for 'std::_Vb_iterator<_Alvbase_wrapped>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(2558): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::_Vb_const_iterator<_Alvbase_wrapped> std::operator +(_Vb_const_iterator<_Alvbase_wrapped>::difference_type,std::_Vb_const_iterator<_Alvbase_wrapped>)': could not deduce template argument for 'std::_Vb_const_iterator<_Alvbase_wrapped>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(2453): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::_Vector_iterator<_Myvec> std::operator +(_Vector_iterator<_Myvec>::difference_type,std::_Vector_iterator<_Myvec>)': could not deduce template argument for 'std::_Vector_iterator<_Myvec>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(361): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::_Vector_const_iterator<_Myvec> std::operator +(_Vector_const_iterator<_Myvec>::difference_type,std::_Vector_const_iterator<_Myvec>)': could not deduce template argument for 'std::_Vector_const_iterator<_Myvec>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(243): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3866): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3856): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3845): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *const ' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3835): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3821): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3811): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3801): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3787): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3771): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3757): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *const ' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3741): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3727): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::_String_iterator<_Mystr> std::operator +(_String_iterator<_Mystr>::difference_type,std::_String_iterator<_Mystr>)': could not deduce template argument for 'std::_String_iterator<_Mystr>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(1490): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::_String_const_iterator<_Mystr> std::operator +(_String_const_iterator<_Mystr>::difference_type,std::_String_const_iterator<_Mystr>)': could not deduce template argument for 'std::_String_const_iterator<_Mystr>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(1372): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::move_iterator<_RanIt> std::operator +(move_iterator<_RanIt>::difference_type,const std::move_iterator<_RanIt> &)': could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(2269): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::_Array_iterator<_Ty,_Size> std::operator +(ptrdiff_t,std::_Array_iterator<_Ty,_Size>)': could not deduce template argument for 'std::_Array_iterator<_Ty,_Size>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(2120): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::_Array_const_iterator<_Ty,_Size> std::operator +(ptrdiff_t,std::_Array_const_iterator<_Ty,_Size>)': could not deduce template argument for 'std::_Array_const_iterator<_Ty,_Size>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(1990): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2784: 'std::reverse_iterator<_RanIt> std::operator +(reverse_iterator<_RanIt>::difference_type,const std::reverse_iterator<_RanIt> &)': could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(1404): note: see declaration of 'std::operator +'
+MainN.cpp(654): error C2676: binary '+': 'Set' does not define this operator or a conversion to a type acceptable to the predefined operator
+MainN.cpp(654): error C2679: binary '[': no operator found which takes a right-hand operand of type 'Set' (or there is no acceptable conversion)
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(1804): note: could be 'const Set &std::vector<Set,std::allocator<_Ty>>::operator [](const unsigned int) const'
+          with
+          [
+              _Ty=Set
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(1790): note: or       'Set &std::vector<Set,std::allocator<_Ty>>::operator [](const unsigned int)'
+          with
+          [
+              _Ty=Set
+          ]
+  MainN.cpp(654): note: while trying to match the argument list '(std::vector<Set,std::allocator<_Ty>>, Set)'
+          with
+          [
+              _Ty=Set
+          ]
+MainN.cpp(654): error C2228: left of '.getFileName' must have class/struct/union
+MainN.cpp(733): error C2784: 'std::_Vb_iterator<_Alvbase_wrapped> std::operator +(_Vb_iterator<_Alvbase_wrapped>::difference_type,std::_Vb_iterator<_Alvbase_wrapped>)': could not deduce template argument for 'std::_Vb_iterator<_Alvbase_wrapped>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(2558): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::_Vb_const_iterator<_Alvbase_wrapped> std::operator +(_Vb_const_iterator<_Alvbase_wrapped>::difference_type,std::_Vb_const_iterator<_Alvbase_wrapped>)': could not deduce template argument for 'std::_Vb_const_iterator<_Alvbase_wrapped>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(2453): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::_Vector_iterator<_Myvec> std::operator +(_Vector_iterator<_Myvec>::difference_type,std::_Vector_iterator<_Myvec>)': could not deduce template argument for 'std::_Vector_iterator<_Myvec>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(361): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::_Vector_const_iterator<_Myvec> std::operator +(_Vector_const_iterator<_Myvec>::difference_type,std::_Vector_const_iterator<_Myvec>)': could not deduce template argument for 'std::_Vector_const_iterator<_Myvec>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(243): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3866): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3856): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3845): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *const ' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3835): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3821): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3811): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3801): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3787): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3771): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3757): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *const ' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3741): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'Set'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(3727): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::_String_iterator<_Mystr> std::operator +(_String_iterator<_Mystr>::difference_type,std::_String_iterator<_Mystr>)': could not deduce template argument for 'std::_String_iterator<_Mystr>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(1490): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::_String_const_iterator<_Mystr> std::operator +(_String_const_iterator<_Mystr>::difference_type,std::_String_const_iterator<_Mystr>)': could not deduce template argument for 'std::_String_const_iterator<_Mystr>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(1372): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::move_iterator<_RanIt> std::operator +(move_iterator<_RanIt>::difference_type,const std::move_iterator<_RanIt> &)': could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(2269): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::_Array_iterator<_Ty,_Size> std::operator +(ptrdiff_t,std::_Array_iterator<_Ty,_Size>)': could not deduce template argument for 'std::_Array_iterator<_Ty,_Size>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(2120): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::_Array_const_iterator<_Ty,_Size> std::operator +(ptrdiff_t,std::_Array_const_iterator<_Ty,_Size>)': could not deduce template argument for 'std::_Array_const_iterator<_Ty,_Size>' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(1990): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2784: 'std::reverse_iterator<_RanIt> std::operator +(reverse_iterator<_RanIt>::difference_type,const std::reverse_iterator<_RanIt> &)': could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xutility(1404): note: see declaration of 'std::operator +'
+MainN.cpp(733): error C2676: binary '+': 'Set' does not define this operator or a conversion to a type acceptable to the predefined operator
+MainN.cpp(733): error C2679: binary '[': no operator found which takes a right-hand operand of type 'Set' (or there is no acceptable conversion)
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(1804): note: could be 'const Set &std::vector<Set,std::allocator<_Ty>>::operator [](const unsigned int) const'
+          with
+          [
+              _Ty=Set
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\vector(1790): note: or       'Set &std::vector<Set,std::allocator<_Ty>>::operator [](const unsigned int)'
+          with
+          [
+              _Ty=Set
+          ]
+  MainN.cpp(733): note: while trying to match the argument list '(std::vector<Set,std::allocator<_Ty>>, Set)'
+          with
+          [
+              _Ty=Set
+          ]
+MainN.cpp(733): error C2228: left of '.getFileName' must have class/struct/union

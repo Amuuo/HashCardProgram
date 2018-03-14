@@ -1,0 +1,5 @@
+﻿  MainN.cpp
+c:\users\adam\source\repos\project1\project1\mainn.cpp(469): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\source\repos\project1\project1\mainn.cpp(691): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\source\repos\project1\project1\mainn.cpp(800): warning C4018: '<': signed/unsigned mismatch
+  Project1.vcxproj -> C:\Users\Adam\source\repos\Project1\Debug\Project1.exe

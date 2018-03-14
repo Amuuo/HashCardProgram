@@ -1,0 +1,6 @@
+SetHand1.txt
+SetHand2.txt
+SetHand3.txt
+SetHand4.txt
+SetHand5.txt
+testAddGraphics.txt
