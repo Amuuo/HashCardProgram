@@ -88,9 +88,9 @@ void outputSet(vector<Set>&);
 void loadArtwork(std::string);
 
 
-static struct termios old, new1;
+/*static struct termios old, new1;
 
-/* Initialize new terminal i/o settings */
+/* Initialize new terminal i/o settings 
 void initTermios(int echo)
 {
 	tcgetattr(0, &old); //grab old terminal i/o settings
@@ -291,7 +291,7 @@ DESCRIPTION : recursive function that takes the tail bucket link,
 and prints out links from head to tail
 =================================================================
 */
-std::string Set::bucketEnd(Card> endLink) const
+std::string Set::bucketEnd(Card* endLink) const
 {
 	std::string s;
 
